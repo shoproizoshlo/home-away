@@ -8,13 +8,19 @@ import { profileSchema } from "./schemas";
 
 const getAuthUser = async () => {
   const user = await currentUser();
-
-  if (!user) throw new Error("You must be loged in to access this route");
+  if (!user) {
+    throw new Error("You must be logged in to access this route");
+  }
   if (!user.privateMetadata.hasProfile) redirect("/profile/create");
-
   return user;
 };
 
+const renderError = (error: unknown): { message: string } => {
+  console.log(error);
+  return {
+    message: error instanceof Error ? error.message : "An error occurred",
+  };
+};
 export const createProfileAction = async (
   prevState: any,
   formData: FormData
@@ -40,9 +46,7 @@ export const createProfileAction = async (
       },
     });
   } catch (error) {
-    return {
-      message: error instanceof Error ? error.message : "An error occurred",
-    };
+    return renderError(error);
   }
   redirect("/");
 };
@@ -64,12 +68,13 @@ export const fetchProfileImage = async () => {
 
 export const fetchProfile = async () => {
   const user = await getAuthUser();
+
   const profile = await db.profile.findUnique({
     where: {
-      ckerkId: user.id,
+      clerkId: user.id,
     },
   });
-  if (!profile) redirect("/profile/create");
+  if (!profile) return redirect("/profile/create");
   return profile;
 };
 
@@ -77,5 +82,19 @@ export const updateProfileAction = async (
   prevState: any,
   formData: FormData
 ): Promise<{ message: string }> => {
-  return { message: "Update profile action" };
+  const user = await getAuthUser();
+  try {
+    const rawData = Object.fromEntries(formData);
+    const validatedFields = profileSchema.parse(rawData);
+    await db.profile.update({
+      where: {
+        clerkId: user.id,
+      },
+      data: validatedFields,
+    });
+    revalidatePath("/profile");
+    return { message: "Profile updated successfully" };
+  } catch (error) {
+    return renderError(error);
+  }
 };
