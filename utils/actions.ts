@@ -20,6 +20,7 @@ const renderError = (error: unknown): { message: string } => {
     message: error instanceof Error ? error.message : "An error occurred",
   };
 };
+
 export const createProfileAction = async (
   prevState: any,
   formData: FormData
