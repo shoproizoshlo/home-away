@@ -11,7 +11,7 @@ async function ProfilePage() {
       <h1 className="text-2xl font-semibold mb-8 capitalize">user profile</h1>
       <div className="border p-8 rounded-md">
         {/* image input container */}
-
+        {/* TODO: input doesn't show default values */}
         <FormContainer action={updateProfileAction}>
           <div className="grid gap-4 md:grid-cols-2 mt-4 ">
             <FormInput
