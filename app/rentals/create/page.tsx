@@ -2,6 +2,7 @@ import FormInput from "@/components/form/FormInput";
 import FormContainer from "@/components/form/FormContainer";
 import { createPropertyAction } from "@/utils/actions";
 import { SubmitButton } from "@/components/form/Buttons";
+import PriceInput from "@/components/form/PriceInput";
 
 function CreateProperty() {
   return (
@@ -26,10 +27,15 @@ function CreateProperty() {
               defaultValue="Dream getaway awaits you here"
             />
             {/* price */}
+            <PriceInput />
             {/* categories */}
           </div>
           {/* text area/description */}
-          <SubmitButton text="create rental" className="mt-12" size={"default"} />
+          <SubmitButton
+            text="create rental"
+            className="mt-12"
+            size={"default"}
+          />
         </FormContainer>
       </div>
     </section>
