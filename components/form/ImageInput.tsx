@@ -1,3 +1,4 @@
+// FIXME: doesn't accept files
 import { Label } from "../ui/label";
 import { Input } from "../ui/input";
 
@@ -19,5 +20,4 @@ function ImageInput() {
     </div>
   );
 }
-
 export default ImageInput;
