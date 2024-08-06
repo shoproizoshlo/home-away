@@ -1,7 +1,7 @@
-import { Input } from "../ui/input";
 import { Label } from "../ui/label";
+import { Input } from "../ui/input";
 
-export default function ImageInput() {
+function ImageInput() {
   const name = "image";
   return (
     <div className="mb-2">
@@ -19,3 +19,5 @@ export default function ImageInput() {
     </div>
   );
 }
+
+export default ImageInput;

@@ -16,14 +16,13 @@ type ImageInputContainerProps = {
   children?: React.ReactNode;
 };
 
-export default function ImageInputContainer(props: ImageInputContainerProps) {
+function ImageInputContainer(props: ImageInputContainerProps) {
   const { image, name, action, text } = props;
   const [isUpdateFormVisible, setUpdateFormVisible] = useState(false);
 
   const userIcon = (
-    <LuUser2 className="w-24 h-24 bg-primary rounded text-white mb-4" />
+    <LuUser2 className="w-24 h-24 bg-primary rounded-md text-white mb-4" />
   );
-
   return (
     <div>
       {image ? (
@@ -57,3 +56,5 @@ export default function ImageInputContainer(props: ImageInputContainerProps) {
     </div>
   );
 }
+
+export default ImageInputContainer;
