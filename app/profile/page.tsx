@@ -21,7 +21,7 @@ async function ProfilePage() {
           action={updateProfileImageAction}
           text="Update profile image"
         />
-        {/* FIXME: input doesn't show default values */}
+
         <FormContainer action={updateProfileAction}>
           <div className="grid gap-4 md:grid-cols-2 mt-4 ">
             <FormInput

@@ -20,6 +20,7 @@ export default function FormInput(props: Props) {
         name={name}
         type={type}
         placeholder={placeholder}
+        defaultValue={defaultValue}
         required
       />
     </div>
