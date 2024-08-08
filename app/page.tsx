@@ -1,12 +1,22 @@
-import { Button } from "@/components/ui/button";
+import CategoriesList from "@/components/home/CategoriesList";
+import PropertiesContainer from "@/components/home/PropertiesContainer";
 
-export default function Home() {
+function HomePage({
+  searchParams,
+}: {
+  searchParams: { category?: string; search?: string };
+}) {
   return (
-    <div>
-      <h1 className="text-xl">HomePage</h1>
-      <Button variant="outline" size="lg" className="capitalize m-8">
-        Click me
-      </Button>
-    </div>
+    <section>
+      <CategoriesList
+        category={searchParams.category}
+        search={searchParams.search}
+      />
+      <PropertiesContainer
+        category={searchParams.category}
+        search={searchParams.search}
+      />
+    </section>
   );
 }
+export default HomePage;
