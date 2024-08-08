@@ -1,13 +1,30 @@
-import { categories } from "@/utils/categories";
-import { ScrollArea, ScrollBar } from "../ui/scroll-area";
-import Link from "next/link";
+import { fetchProperties } from "@/utils/actions";
+import PropertiesList from "./PropertiesList";
+import EmptyList from "./EmptyList";
+import type { PropertyCardProps } from "@/utils/types";
 
-export default function CategoriesList({
+async function PropertiesContainer({
   category,
   search,
 }: {
   category?: string;
   search?: string;
 }) {
-  return <div></div>;
+  const properties: PropertyCardProps[] = await fetchProperties({
+    category,
+    search,
+  });
+  if (properties.length === 0) {
+    return (
+      <EmptyList
+        heading="No results."
+        message="Try changing or removing some of your filters."
+        btnText="Clear Filters"
+      />
+    );
+  }
+
+  return <PropertiesList properties={properties} />;
 }
+
+export default PropertiesContainer;
