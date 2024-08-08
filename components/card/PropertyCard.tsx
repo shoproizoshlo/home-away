@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 // import CountryFlagAndName from "./CountryFlagAndName";
 import PropertyRating from "./PropertyRating";
-// import FavoriteToggleButton from "./FavoriteToggleButton";
+import FavoriteToggleButton from "./FavoriteToggleButton";
 import { PropertyCardProps } from "@/utils/types";
 import { formatCurrency } from "@/utils/format";
 
@@ -44,7 +44,7 @@ export default function PropertyCard({
         </div>
       </Link>
       <div className="absolute top-5 right-5 z-5">
-        {/* favourite toggle button */}
+        <FavoriteToggleButton propertyId={propertyId} />
       </div>
     </article>
   );
