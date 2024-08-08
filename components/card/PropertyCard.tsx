@@ -1,8 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
-import CountryFlagAndName from "./CountryFlagAndName";
+// import CountryFlagAndName from "./CountryFlagAndName";
 import PropertyRating from "./PropertyRating";
-import FavoriteToggleButton from "./FavoriteToggleButton";
+// import FavoriteToggleButton from "./FavoriteToggleButton";
 import { PropertyCardProps } from "@/utils/types";
 import { formatCurrency } from "@/utils/format";
 
@@ -30,6 +30,7 @@ export default function PropertyCard({
             {name.substring(0, 30)}
           </h3>
           {/* property rating */}
+          <PropertyRating inPage={false} propertyId={propertyId} />
         </div>
         <p className="text-sm mt-1 text-muted-foreground ">
           {tagline.substring(0, 40)}
