@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-// import CountryFlagAndName from "./CountryFlagAndName";
+import CountryFlagAndName from "./CountryFlagAndName";
 import PropertyRating from "./PropertyRating";
 import FavoriteToggleButton from "./FavoriteToggleButton";
 import { PropertyCardProps } from "@/utils/types";
@@ -40,7 +40,7 @@ export default function PropertyCard({
             <span className="font-semibold">{formatCurrency(price)} </span>
             night
           </p>
-          {/* country and flag */}
+          <CountryFlagAndName countryCode={country} />
         </div>
       </Link>
       <div className="absolute top-5 right-5 z-5">
