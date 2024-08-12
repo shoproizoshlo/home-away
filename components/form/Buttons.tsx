@@ -12,7 +12,7 @@ type btnSize = "default" | "lg" | "sm";
 type SubmitButtonProps = {
   className?: string;
   text?: string;
-  size: btnSize;
+  size?: btnSize;
 };
 
 export function SubmitButton({
