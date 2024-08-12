@@ -21,7 +21,11 @@ async function CreateProfilePage() {
             <FormInput type="text" name="lastName" label="Last Name" />
             <FormInput type="text" name="username" label="User Name" />
           </div>
-          <SubmitButton text="Create Profile" classNamemt-8 />
+          <SubmitButton
+            text="Create Profile"
+            className="mt-8"
+            size={"default"}
+          />
         </FormContainer>
       </div>
     </section>
