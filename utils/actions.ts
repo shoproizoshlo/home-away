@@ -4,6 +4,7 @@ import { auth, clerkClient, currentUser } from "@clerk/nextjs/server";
 import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
 import {
+  createReviewSchema,
   imageSchema,
   profileSchema,
   propertySchema,
@@ -264,9 +265,24 @@ export const fetchPropertyDetails = (id: string) => {
   });
 };
 
-export const createReviewAction = async () => {
-  return { message: "create review" };
-};
+export async function createReviewAction(prevState: any, formData: FormData) {
+  const user = await getAuthUser();
+  try {
+    const rawData = Object.fromEntries(formData);
+
+    const validatedFields = validateWithZodSchema(createReviewSchema, rawData);
+    await db.review.create({
+      data: {
+        ...validatedFields,
+        profileId: user.id,
+      },
+    });
+    revalidatePath(`/properties/${validatedFields.propertyId}`);
+    return { message: "Review submitted successfully" };
+  } catch (error) {
+    return renderError(error);
+  }
+}
 
 export const fetchPropertyReviews = async () => {
   return { message: "fetch reviews" };

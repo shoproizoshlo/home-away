@@ -13,6 +13,7 @@ import Description from "@/components/properties/Description";
 import Amenities from "@/components/properties/Amenities";
 import { Skeleton } from "@/components/ui/skeleton";
 import dynamic from "next/dynamic";
+import SubmitReview from "@/components/reviews/SubmitReview";
 
 const DynamicMap = dynamic(
   () => import("@/components/properties/PropertyMap"),
