@@ -13,7 +13,7 @@ export function formatQuantity(quantity: number, noun: string): string {
 }
 
 export const formatDate = (date: Date) => {
-  return new Intl.DateTimeFormat("en-US", {
+  return new Intl.DateTimeFormat("de-DE", {
     year: "numeric",
     month: "long",
     day: "numeric",
