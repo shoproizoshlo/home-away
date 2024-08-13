@@ -927,7 +927,7 @@ npx prisma db push
 npx prisma studio
 ```
 
-## Optional - Prisma Crud
+### Optional - Prisma Crud
 
 [Prisma Docs](https://www.prisma.io/docs/concepts/components/prisma-client/crud)
 
