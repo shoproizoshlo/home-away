@@ -36,11 +36,11 @@ The project is an **Airbnb clone** built using Next.js, designed to simulate the
 - Integrating third-party services for payment processing and authentication.
 
 ### Screenshot
-![](./screenshots/home-away-main.png)
-![](./screenshots/home-away-main-auth.png)
-![](./screenshots/home-away-rentals.png)
-![](./screenshots/home-away-reviews-dark.png)
-![](./screenshots/home-away-admin.png)
+![](./home-away-main.png)
+![](./home-away-main-auth.png)
+![](./home-away-rentals.png)
+![](./home-away-reviews-dark.png)
+![](./home-away-admin.png)
 
 ### Links
 
