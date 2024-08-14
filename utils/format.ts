@@ -1,3 +1,16 @@
+export const formatDate = (date: Date, onlyMonth?: boolean) => {
+  const options: Intl.DateTimeFormatOptions = {
+    year: "numeric",
+    month: "long",
+  };
+
+  if (!onlyMonth) {
+    options.day = "numeric";
+  }
+
+  return new Intl.DateTimeFormat("de-DE", options).format(date);
+};
+
 export const formatCurrency = (amount: number | null) => {
   const value = amount || 0;
   return new Intl.NumberFormat("de-DE", {
@@ -11,11 +24,3 @@ export const formatCurrency = (amount: number | null) => {
 export function formatQuantity(quantity: number, noun: string): string {
   return quantity === 1 ? `${quantity} ${noun}` : `${quantity} ${noun}s`;
 }
-
-export const formatDate = (date: Date) => {
-  return new Intl.DateTimeFormat("de-DE", {
-    year: "numeric",
-    month: "long",
-    day: "numeric",
-  }).format(date);
-};
