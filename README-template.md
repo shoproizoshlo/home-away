@@ -36,16 +36,11 @@ The project is an **Airbnb clone** built using Next.js, designed to simulate the
 - Integrating third-party services for payment processing and authentication.
 
 ### Screenshot
-
-![](./screenshot.jpg)
-
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
-
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it.
-
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
-
-**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
+![](./screenshots/home-away-main.png)
+![](./screenshots/home-away-main-auth.png)
+![](./screenshots/home-away-rentals.png)
+![](./screenshots/home-away-reviews-dark.png)
+![](./screenshots/home-away-admin.png)
 
 ### Links
 
@@ -540,4 +535,4 @@ Certainly! Here's a unified list of useful resources with a consistent format:
 
 ## Acknowledgments
 
-- **John Smilga:** For providing the foundational project structure and guidance through the course materials.
+- **John Smilga:** For providing the foundational project structure and guidance through the [course](https://www.udemy.com/share/10b31c3@5ySZMN5LRmlyodaKcgEXLbBEhUMKtBi4CcBWGnNyo9dIBx1PPDoXx8R7xEptYRClhw==/) materials.
