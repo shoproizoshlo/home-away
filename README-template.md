@@ -535,6 +535,7 @@ Certainly! Here's a unified list of useful resources with a consistent format:
 - **Prisma in Next.js:** [Prisma Instance](https://www.prisma.io/docs/guides/other/troubleshooting-orm/help-articles/nextjs-prisma-client-dev-practices#solution) – Best practices for using Prisma in a Next.js project.
 - **React Share:** [React Share](https://www.npmjs.com/package/react-share) – Library for adding social sharing buttons in React applications.
 - **React Leaflet:** [React Leaflet](https://react-leaflet.js.org/) – Documentation for using Leaflet maps in React.
+- **Recharts:** [Zustand Docs](https://recharts.org/en-US/) – Documentation for Recharts library for charts.
 - **Zustand Docs:** [Zustand Docs](https://docs.pmnd.rs/zustand/getting-started/introduction) – Documentation for Zustand, a small, fast state-management library for React.
 
 ## Acknowledgments
